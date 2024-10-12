@@ -3,7 +3,6 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from hadr_exemple.serializers import HadrZeroZeroSerializer
-import time
 
 
 class HadrZeroZeroAPIView(APIView):
@@ -24,4 +23,3 @@ class HadrZeroZeroAPIView(APIView):
         if not data.get('target_length'):
             data['target_length'] = settings.GEANT_COMMANDS_TEMPLATE_DEFAULT_PARAMETERS['target_length']
         return data
-

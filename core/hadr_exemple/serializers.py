@@ -8,6 +8,6 @@ class HadrZeroZeroSerializer(serializers.Serializer):
     target_length = serializers.IntegerField()
 
     def create(self, validated_data):
-        output = hadr_zero_zero_exemple(**validated_data).split('### Fill Cross Sections for proton off Al')[-1].split('### proton 5 GeV on G4_Al xs/X0= 4.09201')[0]
+        output = hadr_zero_zero_exemple(**validated_data)
         return {'output': output}
 

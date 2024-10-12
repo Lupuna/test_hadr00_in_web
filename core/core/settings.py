@@ -129,8 +129,8 @@ GEANT_SETUP_SCRIPT = "/home/user/geant4/geant4-11.2.2-install/bin/geant4.sh"
 GEANT_HADR00_EXEMPLE = "/home/user/geant4/geant4-11.2.2/examples/extended/hadronic/Hadr00/build/Hadr00"
 GEANT_COMMANDS_TEMPLATE = """
 /control/cout/ignoreThreadsExcept 0
-/control/verbose 1
-/run/verbose 1
+/control/verbose 0
+/run/verbose 0
 /tracking/verbose 0
 /testhadr/TargetMat        {target_material} 
 /testhadr/TargetRadius     {target_radius}  cm
@@ -142,8 +142,8 @@ GEANT_COMMANDS_TEMPLATE = """
 /process/em/workerVerbose 0
 /gun/particle proton
 /gun/energy 20. GeV
-/testhadr/verbose 1
-/run/beamOn 10
+/testhadr/verbose 0
+/run/beamOn 1
 exit
 """
 GEANT_COMMANDS_TEMPLATE_DEFAULT_PARAMETERS = {
